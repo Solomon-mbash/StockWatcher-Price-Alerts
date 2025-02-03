@@ -104,8 +104,3 @@ TSLA: 🔺5.24%
 
 **Made with ❤️ by [Solomon Mbash](https://github.com/Solomon-mbash)**
 ```
-
----
-
-### **Key Improvements**:
-Replace placeholders like `your_alphavantage_api_key_here` with actual keys, and you’re ready to go! 🚀
