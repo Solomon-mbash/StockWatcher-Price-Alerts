@@ -1,77 +1,111 @@
-# **Stock Price Alert: Price Alerts & Predictions 📈🔔**
 
-**Stock Price Alert** is a Python-based app that provides real-time stock price alerts, trending news, and predictions for specific stocks. The app retrieves stock price data, predicts whether the stock will rise or fall, and sends SMS alerts to users. It also delivers relevant news articles for the selected company to keep users well-informed.
+# 🚀 StockWatcher: Real-Time Price Alerts & Predictions 📈🔔
 
----
-
-## **Features**
-- **Real-time Stock Alerts**: Get alerts for selected stocks (e.g., Tesla).
-- **Stock Predictions**: Predicts whether the stock price will rise or fall based on recent trends.
-- **News Updates**: Fetches trending news articles related to the selected company.
-- **SMS Notifications**: Receive real-time SMS notifications for stock updates.
+**StockWatcher** is a Python-powered app that delivers **real-time stock price alerts**, **AI-driven predictions**, and **trending news updates** straight to your phone via SMS. Stay ahead of the market with instant insights! 💹
 
 ---
 
-## **Installation**
+## 🌟 Key Features
 
-To get started with StockWatcher, follow the steps below.
+- **🚨 Real-Time Stock Alerts**: Monitor price changes for your favorite stocks (e.g., Tesla).
+- **🔮 Stock Predictions**: Predicts if a stock will rise (🟢) or fall (🔴) using historical data.
+- **📰 News Updates**: Fetches the latest news articles about your selected company.
+- **📱 SMS Notifications**: Get alerts directly on your phone with price changes and news snippets.
+- **🔒 Secure**: Uses `.env` to protect API keys and sensitive data.
 
-### **1. Clone the Repository**
+---
+
+## 🛠️ Table of Contents
+- [Installation](#-installation)
+- [How It Works](#-how-it-works)
+- [Example Output](#-example-output)
+- [Contributing](#-contributing)
+- [Acknowledgements](#-acknowledgements)
+
+---
+
+## ⚡ Installation
+
+### 1️⃣ **Clone the Repository**
 ```bash
 git clone https://github.com/Solomon-mbash/StockWatcher-Price-Alerts.git
-cd StockWatcher
+cd StockWatcher-Price-Alerts
 ```
 
-### **2. Install Dependencies**
-Ensure you have `requests`, `twilio`, and `python-dotenv` installed.
-
+### 2️⃣ **Install Dependencies**
 ```bash
 pip install requests twilio python-dotenv
 ```
 
-### **3. Set Up .env File**
-
-Create a `.env` file in the root of the project and add the following keys:
-
+### 3️⃣ **Set Up Environment Variables**
+Create a `.env` file and add your API keys:
 ```plaintext
-STOCK_API_KEY=your_alphavantage_api_key
-NEWS_API_KEY=your_newsapi_api_key
-TWILIO_ACCOUNT_SID=your_twilio_account_sid
-TWILIO_AUTH_TOKEN=your_twilio_auth_token
+STOCK_API_KEY=your_alphavantage_api_key_here  # 📈 Get from Alpha Vantage
+NEWS_API_KEY=your_newsapi_api_key_here        # 📰 Get from NewsAPI
+TWILIO_ACCOUNT_SID=your_twilio_sid_here       # 📱 Get from Twilio
+TWILIO_AUTH_TOKEN=your_twilio_token_here      # 🔑 Get from Twilio
 ```
 
-### **4. Run the App**
-To run the app, execute the following command:
-
+### 4️⃣ **Run the App**
 ```bash
 python main.py
 ```
 
 ---
 
-## **How It Works**
+## 🧠 How It Works
 
-1. **Stock Data**: Fetches the latest stock data (open and close prices) for the selected stock (e.g., Tesla).
-2. **Stock Prediction**: Calculates the percentage change between the opening price and closing price from the previous days.
-3. **News Fetching**: Retrieves the latest news articles related to the selected company.
-4. **SMS Notification**: Sends an SMS with the stock price change percentage and a random news article to a predefined phone number.
+1. **📊 Stock Data Fetching**  
+   Retrieves daily stock prices (open/close) using the Alpha Vantage API.
+   
+2. **🔍 Price Analysis**  
+   Calculates percentage changes between opening and closing prices to detect trends.
+
+3. **🧠 Prediction Engine**  
+   Determines if the stock is likely to rise (🔺) or fall (🔻) based on recent performance.
+
+4. **📰 News Aggregation**  
+   Fetches the top 3 news articles about the company using NewsAPI.
+
+5. **📲 SMS Alerts**  
+   Sends a consolidated SMS via Twilio with price changes and a news summary.
 
 ---
 
-## **Example Output**
+## 📨 Example Output
 
-When the stock price of Tesla changes, you will receive an SMS like this:
-
+You’ll receive an SMS like this:
 ```
-TSLA: 🔺5.24%
-Headline: Tesla's stock price rises amid positive earnings report
-Brief: Tesla's earnings exceeded expectations, pushing stock value higher.
+TSLA: 🔺5.24%  
+📰 Headline: Tesla's Stock Soars After Record Earnings!  
+💬 Brief: Tesla announced a 20% revenue increase, beating analyst expectations.
 ```
 
 ---
 
-## **Acknowledgements**
-- [Alpha Vantage API](https://www.alphavantage.co/) for stock data.
-- [NewsAPI](https://newsapi.org/) for news articles.
-- [Twilio](https://www.twilio.com/) for SMS service.
+## 👥 Contributing
+
+**Love this project?** Feel free to contribute!  
+1. 🍴 Fork the repo.  
+2. 🌿 Create a branch: `git checkout -b feature/your-feature`.  
+3. 💾 Commit changes: `git commit -m "Add awesome feature"`.  
+4. 🚀 Push to the branch: `git push origin feature/your-feature`.  
+5. 🔄 Open a pull request.
+
 ---
+
+## 🤝 Acknowledgements
+
+- **📈 Stock Data**: Powered by [Alpha Vantage](https://www.alphavantage.co/).
+- **📰 News API**: Sourced from [NewsAPI](https://newsapi.org/).
+- **📱 SMS Service**: Delivered by [Twilio](https://www.twilio.com/).
+
+---
+
+**Made with ❤️ by [Solomon Mbash](https://github.com/Solomon-mbash)**
+```
+
+---
+
+### **Key Improvements**:
+Replace placeholders like `your_alphavantage_api_key_here` with actual keys, and you’re ready to go! 🚀
